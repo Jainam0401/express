@@ -2,10 +2,13 @@
   "name": "express",
   "version": "1.0.0",
   "license": "MIT",
-  "scripts": {
-    "dev": "tsx src/index.ts",
-    "postinstall": "npx prisma generate"
-  },
+ "scripts": {
+  "build": "tsc",
+  "start": "node dist/src/index.js",
+  "dev": "tsx src/index.ts",
+  "postinstall": "prisma generate"
+}
+,
   "dependencies": {
     "@prisma/adapter-pg": "7.0.0",
     "@prisma/client": "7.0.0",
