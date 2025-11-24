@@ -1,0 +1,24 @@
+generator client {
+  provider   = "prisma-client"
+  output     = "./generated"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+model Shoe {
+  id      Int           @id @default(autoincrement())
+  name    String
+  metrics ShoeMetric[]
+}
+
+model ShoeMetric {
+  id              Int      @id @default(autoincrement())
+  shoeId          Int
+  shoe            Shoe     @relation(fields: [shoeId], references: [id])
+  sales           Int
+  advertisingCost Int
+  impressions     Int
+  clicks          Int
+  recordDate      DateTime
+}
