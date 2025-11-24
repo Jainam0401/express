@@ -180,8 +180,5 @@ app.use((req, res) => {
   res.status(404).json({ error: "Route not found" });
 });
 
-const port = Number(process.env.PORT || 4000);
-
-app.listen(port, () => console.log(`Server running on port ${port}`));
 
 export default app;
