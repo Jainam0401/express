@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "tsx src/index.ts",
+    "dev": "tsx src/app.ts",
     "postinstall": "npx prisma generate"
   },
   "dependencies": {
